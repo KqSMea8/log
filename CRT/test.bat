@@ -1,0 +1,1 @@
+start SecureCRT_6.2/SecureCRT.exe /script test.vbs /ARG 10.251.233.31 /ARG root /ARG admin
