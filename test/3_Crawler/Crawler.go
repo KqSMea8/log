@@ -46,7 +46,8 @@ func parse()  {
 	}
 
 	//创建excel文件
-	f, err := os.Create("C:/haha3.xlsx")
+	//f, err := os.Create("C:/haha3.xlsx")
+	f, err := os.Create("C:/haha.log")
 	if err != nil {
 		panic(err)
 	}
@@ -55,7 +56,7 @@ func parse()  {
 	f.WriteString("电影名称"+"\t"+"评分"+"\t"+"评价人数"+"\t"+"\r\n")
 
 	//循环每页解析并把结果写入excel
-	for i:=0;i<10;i++{
+	for i:=0;i<50;i++{
 		fmt.Println("正在抓取第"+strconv.Itoa(i)+"页......")
 		url:="https://movie.douban.com/top250?start="+strconv.Itoa(i*25)+"&filter="
 		spider := &Spider{url, header}
